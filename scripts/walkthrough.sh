@@ -62,7 +62,7 @@ function clone_configurations {
   echo " - https://github.com/Azure/caf-terraform-landingzones/blob/master/documentation/code_architecture/hierarchy.md"
   echo ""
   echo "Examples to follow"
-  echo " - https://github.com/aztfmod/terraform-azurerm-caf/tree/master/examples"
+  echo " - https://github.com/massilp/terraform-azurerm-caf/tree/master/examples"
   echo ""
   echo "Download configuration starter CAF repository for walkthrough"
   echo " - https://github.com/Azure/caf-terraform-landingzones-starter"

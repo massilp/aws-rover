@@ -687,7 +687,7 @@ function deploy {
 
     cd ${landingzone_name}
     if [ -f "$(git rev-parse --show-toplevel)/.gitmodules" ]; then
-        version=$(cd $(git rev-parse --show-toplevel)/aztfmod &>/dev/null || cd $(git rev-parse --show-toplevel) && git branch -a --contains $(git rev-parse --short HEAD) || echo "from Terraform registry")
+        version=$(cd $(git rev-parse --show-toplevel)/massilp &>/dev/null || cd $(git rev-parse --show-toplevel) && git branch -a --contains $(git rev-parse --short HEAD) || echo "from Terraform registry")
         information "CAF module version ($(git rev-parse --show-toplevel)/.gitmodules): $version"
     fi
     # for migration and hybrid support from azurerm to tfe
@@ -731,8 +731,8 @@ function checkout_module {
 
         if [ -f "${base_folder}/.gitmodules" ]; then
             cd ${base_folder}
-            if [ ! $(git config --global --get safe.directory | grep "${base_folder}/aztfmod" 2>&1) ]; then
-                git config --global --add safe.directory "${base_folder}/aztfmod"
+            if [ ! $(git config --global --get safe.directory | grep "${base_folder}/massilp" 2>&1) ]; then
+                git config --global --add safe.directory "${base_folder}/massilp"
             fi
             git submodule init 2>&1
             git submodule update --force --checkout 2>&1

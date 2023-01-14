@@ -73,7 +73,7 @@ function display_clone_instructions {
                 echo "    - Clone the launchpad (branch vnext): rover --clone-folder-strip 2 --clone-destination /tf/rover/landingzones --clone-folder /landingzones/launchpad --clone-branch vnext"
                 echo
                 echo "    - Clone the CAF foundations landingzone: rover --clone-folder /landingzones/landingzone_caf_foundations"
-                echo "    - Clone the AKS landingzone: rover --clone aztfmod/landingzone_aks --clone-destination /tf/caf/landingzones/landingzone_aks"
+                echo "    - Clone the AKS landingzone: rover --clone massilp/landingzone_aks --clone-destination /tf/caf/landingzones/landingzone_aks"
                 echo
                 echo
                 shift 1

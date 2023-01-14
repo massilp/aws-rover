@@ -10,7 +10,7 @@ source ${script_path}/lib/logger.sh
 information "@calling terraform api trigger for action ${tf_action}"
 # 1. Define Variables
 
-AZTFMOD_DIRECTORY=$(git rev-parse --show-toplevel)/aztfmod
+massilp_DIRECTORY=$(git rev-parse --show-toplevel)/massilp
 ORG_NAME=${TF_VAR_tf_cloud_organization}
 WORKSPACE_NAME=${TF_VAR_workspace}
 CONFIG_PATH="${TF_DATA_DIR}/${TF_VAR_environment}/tfstates/${TF_VAR_level}/${TF_VAR_workspace}"
@@ -18,8 +18,8 @@ CONFIG_PATH="${TF_DATA_DIR}/${TF_VAR_environment}/tfstates/${TF_VAR_level}/${TF_
 # 2. Create the File for Upload
 
 cp -r ${landingzone_name} ${CONFIG_PATH}/module
-cp -r ${AZTFMOD_DIRECTORY} ${CONFIG_PATH}/module/aztfmod
-find ${CONFIG_PATH}/module -type f -name '*.tf' | xargs sed -i 's/\.\.\/aztfmod/\.\/aztfmod/g'
+cp -r ${massilp_DIRECTORY} ${CONFIG_PATH}/module/massilp
+find ${CONFIG_PATH}/module -type f -name '*.tf' | xargs sed -i 's/\.\.\/massilp/\.\/massilp/g'
 
 UPLOAD_FILE_NAME="${CONFIG_PATH}/caf-landingzones-$(date +%s).tar.gz"
 tar -zcvf "$UPLOAD_FILE_NAME" -C ${CONFIG_PATH}/module --exclude "**/_pictures" --exclude "**/examples" --exclude "**/.git" --exclude "**/documentation" --exclude "**/scenario" . 1>/dev/null

@@ -264,7 +264,7 @@ RUN apt-get update && \
     go version && \
     #
     echo "Installing caflint..." && \
-    go install github.com/aztfmod/caflint@latest && \
+    go install github.com/massilp/caflint@latest && \
     #
     echo "Installing latest Tflint Ruleset for Azure" && \
     curl -sSL -o /tmp/tflint-ruleset-azurerm.zip https://github.com/terraform-linters/tflint-ruleset-azurerm/releases/latest/download/tflint-ruleset-azurerm_${TARGETOS}_${TARGETARCH}.zip 2>&1 && \
