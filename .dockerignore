@@ -1,0 +1,13 @@
+**/.terraform
+**/*.tfstate
+**/*.tfplan
+.DS_Store
+**/terraform.tfstate.d
+**/terraform.tfstate.backup
+**/.terraform.tfstate.lock.info
+**/~*.*
+**/*Dockerfile
+**/*.gitignore
+**/*.dockerignore
+**/*.azure
+version.cat
