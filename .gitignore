@@ -1,0 +1,16 @@
+**/.terraform
+**/*.azure
+**/*.tfstate
+**/*.tfplan
+.DS_Store
+**/terraform.tfstate.d
+**/terraform.tfstate.backup
+**/.terraform.tfstate.lock.info
+**/~*.*
+**/*.log
+version.txt
+landingzones
+aztfmod
+public/
+walkthrough/
+.data
