@@ -102,7 +102,7 @@ register_rover_context() {
   information "@call register_rover_context"
 
   ROVER_AGENT_TAG=${ROVER_AGENT_VERSION:="1.2"}
-  ROVER_AGENT_DOCKER_IMAGE=$(curl -s https://hub.docker.com/v2/repositories/massilp/rover-agent/tags | jq -r ".results | sort_by(.tag_last_pushed) | reverse  | map(select(.name | contains(\"${docker_hub_suffix}\") ) | select(.name | contains(\"${ROVER_AGENT_TAG}\") ) ) | .[0].name")
+  ROVER_AGENT_DOCKER_IMAGE=$(curl -s https://hub.docker.com/v2/repositories/massimilianolapuma/rover-agent/tags | jq -r ".results | sort_by(.tag_last_pushed) | reverse  | map(select(.name | contains(\"${docker_hub_suffix}\") ) | select(.name | contains(\"${ROVER_AGENT_TAG}\") ) ) | .[0].name")
 
   cd /tf/caf/landingzones
   GIT_REFS=$(git show-ref | grep $(git rev-parse HEAD) | awk '{print $2}' | head -n 1)

@@ -57,21 +57,21 @@ function build_base_rover_image {
 
     case "${strategy}" in
         "github")
-            registry="massilp/"
+            registry="massimilianolapuma/"
             tag=${versionTerraform}-${tag_date_release}
             rover_base="${registry}rover"
             rover="${rover_base}:${tag}"
             export tag_strategy=""
             ;;
         "alpha")
-            registry="massilp/"
+            registry="massimilianolapuma/"
             tag=${versionTerraform}-${tag_date_preview}
             rover_base="${registry}rover-alpha"
             rover="${rover_base}:${tag}"
             export tag_strategy="alpha-"
             ;;
         "dev")
-            registry="massilp/"
+            registry="massimilianolapuma/"
             tag=${versionTerraform}-${tag_date_preview}
             rover_base="${registry}rover-preview"
             export rover="${rover_base}:${tag}"

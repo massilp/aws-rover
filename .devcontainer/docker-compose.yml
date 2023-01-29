@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   rover:
-    image: massilp/aws-rover:1.0
+    image: massimilianolapuma/aws-rover:v1.0
     user: vscode
 
     labels:
