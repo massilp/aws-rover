@@ -68,6 +68,7 @@ RUN apt-get update && \
     jq \
     less \
     locales \
+    cmake \
     make \
     openssh-server \
     dnsutils \
