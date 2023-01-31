@@ -148,7 +148,7 @@ RUN apt-get update && \
     # Install Terragrunt
     #
     echo "Installing latest Terragrunt ..." && \
-    curl -sSl -o /tmp/terragrunt https://github.com/gruntwork-io/terragrunt/releases/download/v0.42.8/terragrunt_${TARGETOS}_${TARGETARCH} && \
+    curl -sSl -o /tmp/terragrunt https://github.com/gruntwork-io/terragrunt/releases/download/v0.43.0/terragrunt_${TARGETOS}_${TARGETARCH} && \
     mv /tmp/terragrunt /usr/local/bin && \
     chmod +x /usr/local/bin/terragrunt && \
     #
